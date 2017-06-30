@@ -1,0 +1,5 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:cs="clr-namespace:DllColorSchemes.Model;assembly=DllColorSchemes"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<cs:ColorScheme x:Key="ColorSchemeBinder"/>
+</ResourceDictionary>

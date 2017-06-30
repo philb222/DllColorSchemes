@@ -1,0 +1,134 @@
+﻿<Window x:Class="TestColorSchemes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Test Color Schemes" 
+		Height="480" Width="550"
+		WindowStartupLocation="CenterScreen"
+		Loaded="Window_Loaded">
+	<Grid Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundSolidBrush2}">
+		<StackPanel Margin="0 30 0 0">
+			<Button x:Name="btnColorSchemes"
+				Click="btnColorSchemes_Click"
+				Background="Gray"
+				Foreground="Lime"
+				Height="50" Width="140" Cursor="Hand" FontWeight="Bold"
+				Content="Get Color Schemes"/>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0 30 0 0">
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundSolidBrush1}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush1}"
+						Content="Testing Foreground1 and Background1"/>
+				</Border>
+
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundSolidBrush2}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush2}"
+						Content="Testing Foreground2 and Background2"/>
+				</Border>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0 0 0 0">
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundLinearBrush1}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush1}"
+						Content="Foreground1 + BackgroundLinearBrush1"/>
+				</Border>
+
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundLinearBrush1}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush2}"
+						Content="Foreground2 + BackgroundLinearBrush1"/>
+				</Border>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0 0 0 0">
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundLinearBrush2}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush1}"
+						Content="Foreground1 + BackgroundLinearBrush2"/>
+				</Border>
+
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}">
+					<Label VerticalContentAlignment="Center"
+						HorizontalContentAlignment="Center"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundLinearBrush2}"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush2}"
+						Content="Foreground2 + BackgroundLinearBrush2"/>
+				</Border>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0 0 0 0">
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}"
+						CornerRadius="40"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundRadialBrush1}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="Transparent"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush1}"
+						Content="Foreground1 + BackgroundRadialBrush1"/>
+				</Border>
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}"
+						CornerRadius="40"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundRadialBrush1}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="Transparent"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush2}"
+						Content="Foreground2 + BackgroundRadialBrush1"/>
+				</Border>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0 0 0 0">
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}"
+						CornerRadius="40"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundRadialBrush2}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="Transparent"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush1}"
+						Content="Foreground1 + BackgroundRadialBrush2"/>
+				</Border>
+				<Border Height="40" Width="240" Margin="10"
+						BorderThickness="2" BorderBrush="{Binding Source={StaticResource ColorSchemeBinder}, Path=MouseOverBrush}"
+						CornerRadius="40"
+						Background="{Binding Source={StaticResource ColorSchemeBinder}, Path=BackgroundRadialBrush2}">
+					<Label VerticalContentAlignment="Center"
+						   HorizontalContentAlignment="Center"
+						Background="Transparent"
+						Foreground="{Binding Source={StaticResource ColorSchemeBinder}, Path=ForegroundBrush2}"
+						Content="Foreground2 + BackgroundRadialBrush2"/>
+				</Border>
+			</StackPanel>
+
+		</StackPanel>
+
+	</Grid>
+</Window>

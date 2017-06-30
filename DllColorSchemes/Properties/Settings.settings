@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DllColorSchemes.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Background1" Type="System.Windows.Media.Color" Scope="Application">
+      <Value Profile="(Default)">#FFADD8E6</Value>
+    </Setting>
+    <Setting Name="Background2" Type="System.Windows.Media.Color" Scope="Application">
+      <Value Profile="(Default)">#FF778899</Value>
+    </Setting>
+    <Setting Name="Foreground1" Type="System.Windows.Media.Color" Scope="Application">
+      <Value Profile="(Default)">#FF000000</Value>
+    </Setting>
+    <Setting Name="Foreground2" Type="System.Windows.Media.Color" Scope="Application">
+      <Value Profile="(Default)">#FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="MouseOverColor" Type="System.Windows.Media.Color" Scope="Application">
+      <Value Profile="(Default)">#FF32CD32</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

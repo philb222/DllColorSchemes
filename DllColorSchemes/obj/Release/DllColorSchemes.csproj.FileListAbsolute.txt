@@ -1,0 +1,14 @@
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\bin\Release\DllColorSchemes.dll.config
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\bin\Release\DllColorSchemes.dll
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\bin\Release\DllColorSchemes.pdb
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\View\ColorSchemeWindow.g.cs
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes_MarkupCompile.cache
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes_MarkupCompile.lref
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\Resources\Dictionary1.baml
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\View\ColorSchemeWindow.baml
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes.g.resources
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes.Properties.Resources.resources
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes.csproj.GenerateResource.Cache
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes.dll
+C:\Users\Phillip\Documents\Visual Studio 2017\Projects\DLL\DllColorSchemes\DllColorSchemes\obj\Release\DllColorSchemes.pdb

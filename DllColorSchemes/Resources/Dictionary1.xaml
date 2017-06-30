@@ -1,0 +1,209 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:ex="clr-namespace:DllColorSchemes.Extensions"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:POptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    >
+
+	<!-- Colors ================================================================================================================ -->
+
+	<RadialGradientBrush x:Key="radBrush1" POptions:Freeze="True" >
+		<GradientStop Offset="0" Color="AliceBlue"/>
+		<GradientStop Offset="1" Color="Blue"/>
+	</RadialGradientBrush>
+
+	<RadialGradientBrush x:Key="radBrush2" POptions:Freeze="True">
+		<GradientStop Offset="0" Color="AliceBlue"/>
+		<GradientStop Offset="1" Color="LightGreen"/>
+	</RadialGradientBrush>
+
+	<LinearGradientBrush x:Key="linBrush1" POptions:Freeze="True">
+		<GradientStop Offset="0" Color="#FF007711"/>
+		<GradientStop Offset="0.5" Color="Blue"/>
+		<GradientStop Offset="1" Color="#FF007711"/>
+	</LinearGradientBrush>
+
+	<SolidColorBrush x:Key="MouseOverColorKey" Color="Red" POptions:Freeze="True"/>
+	<SolidColorBrush x:Key="Background1" Color="Black" POptions:Freeze="True"/>
+	<SolidColorBrush x:Key="Background2" Color="DarkGray" POptions:Freeze="True"/>
+	<SolidColorBrush x:Key="Foreground1" Color="Black" POptions:Freeze="True"/>
+
+	<!-- The ExtButton class offers a 'mouse over color' property, which is used during the color scheme 
+         choices window. That along with other colors are used to pick a color scheme for the UI. -->
+	<Style x:Key="ExtButtonStyle" TargetType="ex:ExtButton" BasedOn="{StaticResource {x:Type Button}}">
+		<Style.Setters>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ex:ExtButton">
+						<Border Name="BtnBorder"
+								BorderBrush="Black" BorderThickness="{TemplateBinding BorderThickness}"
+								CornerRadius="0"
+								Background="{TemplateBinding Background}" >
+							<ContentControl Foreground="{TemplateBinding Foreground}">
+								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+												RecognizesAccessKey="True"/>
+							</ContentControl>
+						</Border>
+						<ControlTemplate.Resources>
+						</ControlTemplate.Resources>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter Property="Cursor" Value="Hand"/>
+								<Setter Property="BorderBrush" TargetName="BtnBorder" >
+									<Setter.Value>
+										<Binding Path="MouseOverBackground">
+											<Binding.RelativeSource>
+												<RelativeSource Mode="FindAncestor"
+																AncestorType="Button" AncestorLevel="1" />
+											</Binding.RelativeSource>
+										</Binding>
+									</Setter.Value>
+								</Setter>
+							</Trigger>
+							<Trigger Property="IsFocused" Value="True">
+								<Setter Property="BorderBrush" TargetName="BtnBorder" >
+									<Setter.Value>
+										<Binding Path="MouseOverBackground">
+											<Binding.RelativeSource>
+												<RelativeSource Mode="FindAncestor"
+																AncestorType="Button" AncestorLevel="1" />
+											</Binding.RelativeSource>
+										</Binding>
+									</Setter.Value>
+								</Setter>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+	</Style>
+
+	<!-- Normal Button style -->
+	<Style x:Key="NormalButton" TargetType="Button"  BasedOn="{StaticResource {x:Type Button}}">
+
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="true">
+				<Setter Property="FontStyle" Value="Italic"/>
+				<Setter Property="FontWeight" Value="Bold"/>
+			</Trigger>
+		</Style.Triggers>
+
+		<Style.Setters>
+			<Setter Property="RenderTransformOrigin" Value=".5, .5"/>
+			<Setter Property="RenderTransform">
+				<Setter.Value>
+					<ScaleTransform >
+					</ScaleTransform >
+				</Setter.Value>
+			</Setter>
+
+			<Setter Property="Background" Value="#7777FF"/>
+			<Setter Property="Cursor" Value="Hand"/>
+			<Setter Property="OverridesDefaultStyle" Value="true"/>
+			<Setter Property="IsTabStop" Value="true"/>
+			<Setter Property="SnapsToDevicePixels" Value="true"/>
+
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Border Name="BtnBorder"
+                                BorderBrush="Black" BorderThickness="2" CornerRadius="6"
+                                Margin="0, 0, 0, 0"
+                                Background="{TemplateBinding Background}">
+							<ContentControl Name="Content1"
+                                            Margin="1, 1, 1, 1" IsTabStop="False"
+                                            Foreground="{TemplateBinding Foreground}">
+								<ContentPresenter  Height="{TemplateBinding Height}" 
+                                                   MinWidth="{TemplateBinding MinWidth}" 
+                                                   Width="{TemplateBinding Width}" 
+                                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                   RecognizesAccessKey="True"/>
+							</ContentControl>
+						</Border>
+						<ControlTemplate.Triggers>
+
+							<Trigger Property="IsEnabled" Value="False">
+								<Setter TargetName="BtnBorder" Property="Background" Value="LightGray"/>
+								<Setter TargetName="Content1" Property="Foreground" Value="Black"/>
+							</Trigger>
+
+							<Trigger Property="IsKeyboardFocused" Value="False">
+								<Setter Property="BorderBrush" Value="Black"
+                                        TargetName="BtnBorder"/>
+								<Setter Property="FontWeight" Value="Normal"/>
+								<Setter Property="FontStyle" Value="Normal"/>
+							</Trigger>
+
+							<Trigger Property="IsKeyboardFocused" Value="True">
+								<Setter Property="FontWeight" Value="Bold"/>
+								<Setter Property="FontStyle" Value="Italic"/>
+							</Trigger>
+
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter Property="BorderBrush" Value="{StaticResource MouseOverColorKey}"
+                                        TargetName="BtnBorder"/>
+							</Trigger>
+
+							<EventTrigger RoutedEvent="PreviewMouseLeftButtonDown">
+								<BeginStoryboard>
+									<Storyboard AutoReverse="True" RepeatBehavior="1x">
+										<DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
+                                                         From="1" To=".6" Duration="0:0:0.1" />
+										<DoubleAnimation Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
+                                                         From="1" To=".6" Duration="0:0:0.1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</EventTrigger>
+
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+	</Style>
+
+	<!-- Label style ======================================================================================= -->
+	<Style x:Key="Label1" TargetType="Label">
+		<Style.Setters>
+			<Setter Property="Label.Background" Value="Black"/>
+			<Setter Property="Label.Foreground" Value="White"/>
+			<Setter Property="Label.HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="Label.Height" Value="18"/>
+			<Setter Property="Label.Padding" Value="5 0 5 0"/>
+			<Setter Property="Label.VerticalContentAlignment" Value="Center"/>
+		</Style.Setters>
+	</Style>
+
+	<!-- Style for tool tips. ===================================== -->
+	<Style x:Key="ToolTipStyle" TargetType="ToolTip" BasedOn="{StaticResource {x:Type ToolTip}}">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ToolTip">
+					<Border Background="{StaticResource radBrush2}" 
+                            CornerRadius="10"
+                            BorderThickness="4">
+						<Border.Effect>
+							<DropShadowEffect BlurRadius="10"
+                                              Color="Black"
+                                              Direction="180"
+                                              Opacity="0.5"
+                                              ShadowDepth="20">
+							</DropShadowEffect>
+						</Border.Effect>
+						<Label Foreground="{StaticResource Foreground1}" 
+							   FontWeight="Bold">
+							<ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+							</ContentPresenter>
+						</Label>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

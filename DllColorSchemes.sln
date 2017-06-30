@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllColorSchemes", "DllColorSchemes\DllColorSchemes.csproj", "{339C0B9F-290B-43CE-AA11-C631A533F937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestColorSchemes", "TestColorSchemes\TestColorSchemes.csproj", "{7CFC75DA-23C9-4642-B031-D5E05DBCCCEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{339C0B9F-290B-43CE-AA11-C631A533F937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339C0B9F-290B-43CE-AA11-C631A533F937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339C0B9F-290B-43CE-AA11-C631A533F937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339C0B9F-290B-43CE-AA11-C631A533F937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CFC75DA-23C9-4642-B031-D5E05DBCCCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CFC75DA-23C9-4642-B031-D5E05DBCCCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CFC75DA-23C9-4642-B031-D5E05DBCCCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CFC75DA-23C9-4642-B031-D5E05DBCCCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
